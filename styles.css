@@ -79,6 +79,33 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1.5rem;
+}
+
+header {
+    background-color: var(--charcoal);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-left: 4.25rem;
+}
+
+header .logo {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('vanguard-logo.svg') no-repeat center/contain;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
