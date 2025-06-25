@@ -210,6 +210,35 @@ section p {
     line-height: 1.6;
     margin-bottom: 1rem;
 }
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.offering-card {
+    background-color: var(--blue);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
