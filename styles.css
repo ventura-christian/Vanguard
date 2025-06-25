@@ -59,6 +59,7 @@ table {
     --white: #EAEAEA;
     --black: #000000;
     --charcoal: #333333;
+    --gainsboro: #787887;
     --font: "Inter", sans-serif;
 }
 
@@ -228,8 +229,22 @@ section p {
 
 .offering-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px var(--charcoal);
+    box-shadow: 0 8px 16px var(--gainsboro);
 }
+
+.offering-card h3 {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+
+.offering-card p {
+    font-size: 0.9rem;
+    color: var(--white);
+    line-height: 1.5;
+    text-align: left;
+}
+
 
 
 
