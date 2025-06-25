@@ -172,19 +172,24 @@ header .logo {
     line-height: 1.5;
 }
 
+.button {
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
 
 
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1
- {
-    content: "";
-
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
-} */
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -250,3 +255,15 @@ header .logo {
 
 
 /* MEDIA QUERIES (LARGE)megadeth
+
+
+/* ADD FLOATING SVG LOGO BEFORE THE H1
+ {
+    content: "";
+
+    left:-.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+
+} */
