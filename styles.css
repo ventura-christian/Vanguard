@@ -60,6 +60,7 @@ table {
     --black: #000000;
     --charcoal: #333333;
     --gainsboro: #787887;
+    --opaque-white: #ffffff1a;
     --font: "Inter", sans-serif;
 }
 
@@ -258,7 +259,27 @@ section p {
 }
 
 .results-content {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.results-table {
+    background-color: var(--charcoal);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+}
+
+.results-table h3 {
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--opaque-white);
 }
 
 
