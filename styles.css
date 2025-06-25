@@ -108,6 +108,43 @@ header .logo {
     background: url('vanguard-logo.svg') no-repeat center/contain;
 }
 
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+}
+
+.main-navigation {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.main-navigation.acvtive {
+    display: block;
+}
+
+.main-navigation li {
+    margin-bottom: 1rem;
+}
+
+.main-navigation a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-navigation a:hover {
+    background-color: var(--white);
+}
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
