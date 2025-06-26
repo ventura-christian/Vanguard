@@ -413,7 +413,86 @@ form .button {
     margin-top: 1rem;
 }
 
+footer {
+    background-color: var(--charcoal);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+footer p {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--blue);
+}
+
 /* MEDIA QUERIES (MEDIUM) */ 
+@media (min-width: 800px) {
+    header .container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-navigation {
+        display: flex;
+        width: auto;
+        padding-top: 0;
+    }
+
+    .main-navigation li:last-child {
+        margin-right: 0;
+    }
+
+    #innovation-investment.hero h2 {
+        font-size: 3.5rem;
+    }
+
+    #innovation-investment.hero p {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    .offerings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .results-table {
+        width: 50%;
+    }
+
+    .results-chart {
+        width: 50%;
+    }
+
+    #bar-chart {
+        height: 350px
+    }
+
+}
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -430,7 +509,38 @@ form .button {
     }
 
 
-/* MEDIA QUERIES (LARGE)megadeth
+/* MEDIA QUERIES (LARGE)megadeth */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #innovation-investment.hero h2 {
+        font-size: 4.5rem;
+    }
+
+    #innovation-investment.hero p {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 3rem;
+    }
+
+    .offerings-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .results-table {
+        max-width: none;
+    }
+
+    form {
+        padding: 3rem;
+    }
+
+}
+
 
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1
