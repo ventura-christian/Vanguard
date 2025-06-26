@@ -61,6 +61,8 @@ table {
     --charcoal: #333333;
     --gainsboro: #787887;
     --opaque-white: #ffffff1a;
+    --light-dark-gray: #b5a5a5;
+    --light-blue: #0e7df380;
     --font: "Inter", sans-serif;
 }
 
@@ -367,6 +369,48 @@ form {
     background-color: var(--charcoal);
     padding: 2rem;
     border-radius: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--light-dark-gray);
+    border-radius: 5px;
+    background-color: var(--darker-gray);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px var(--light-blue);
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
 /* MEDIA QUERIES (MEDIUM) */ 
