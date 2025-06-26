@@ -59,7 +59,7 @@ table {
     --white: #EAEAEA;
     --black: #000000;
     --charcoal: #333333;
-    --gainsboro: #787887;
+    --darker-gray: #222222;
     --opaque-white: #ffffff1a;
     --light-dark-gray: #b5a5a5;
     --light-blue: #0e7df380;
@@ -87,29 +87,42 @@ body {
 }
 
 header {
-    background-color: var(--charcoal);
+    position: relative;
+    background-color: var(--black);
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px var(--blue);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 header h1 {
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--blue);
     margin-left: 4.25rem;
+    font-family: var(--font);
+    font-weight: bold;
 }
 
 header .logo {
-    content: "";
-    position: absolute;
-    left: 1rem;
+    position: static;
     width: 3.75rem;
     height: 3.75rem;
     background: url('photos/vanguard-logo.svg') no-repeat center/contain;
+    margin-right: 1rem;
 }
 
 .menu-toggle {
@@ -128,7 +141,7 @@ header .logo {
     padding-top: 1rem;
 }
 
-.main-navigation.acvtive {
+.main-navigation.active {
     display: block;
 }
 
@@ -148,8 +161,8 @@ header .logo {
 
 .main-navigation a:hover {
     background-color: var(--white);
+    color: var(--black);
 }
-/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 
 #innovation-investment.hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('photos/vanguard-hero.jpg') no-repeat center center/cover;
@@ -436,12 +449,11 @@ footer a:hover {
     color: var(--blue);
 }
 
-/* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
     header .container {
         flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .menu-toggle {
@@ -452,10 +464,16 @@ footer a:hover {
         display: flex;
         width: auto;
         padding-top: 0;
+        gap: 2rem;
+        align-items: center;
     }
 
-    .main-navigation li:last-child {
-        margin-right: 0;
+    .main-navigation li {
+        margin-bottom: 0;
+    }
+
+    header h1 {
+        margin-bottom: 0;
     }
 
     #innovation-investment.hero h2 {
@@ -494,22 +512,7 @@ footer a:hover {
 
 }
 
-    #results {
-        grid-template-columns: 1fr 1fr;
-    }
-    .results-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .results-table {
-        width: 50%;
-    }
-    .bar-chart {
-        width: 50%;
-    }
-
-
-/* MEDIA QUERIES (LARGE)megadeth */
+/* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
     header h1 {
         font-size: 2rem;
