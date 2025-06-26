@@ -86,6 +86,12 @@ body {
     padding: 1.5rem;
 }
 
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 header {
     position: relative;
     background-color: var(--black);
@@ -106,23 +112,26 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+}
+
+header .container > * {
+    align-self: center;
 }
 
 header h1 {
     font-size: 1.5rem;
     color: var(--blue);
-    margin-left: 4.25rem;
-    font-family: var(--font);
+    /* font-family: var(--font); */
     font-weight: bold;
+    margin: 0;
 }
 
 header .logo {
-    position: static;
+    /* position: static; */
     width: 3.75rem;
     height: 3.75rem;
     background: url('photos/vanguard-logo.svg') no-repeat center/contain;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
 }
 
 .menu-toggle {
@@ -135,7 +144,9 @@ header .logo {
 }
 
 .main-navigation {
-    display: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
     width: 100%;
     text-align: center;
     padding-top: 1rem;
@@ -150,7 +161,7 @@ header .logo {
 }
 
 .main-navigation a {
-    color: var(--white);
+    color: var(--blue);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
