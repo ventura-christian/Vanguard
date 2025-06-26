@@ -282,21 +282,35 @@ section p {
     border-bottom: 1px solid var(--opaque-white);
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
+table th, table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--opaque-white);
+    color: var(--white);
+}
 
+table th {
+    background-color: var(--opaque-white);
+    font-weight: bold;
+}
 
+table tbody tr:last-child td {
+    border-bottom: none;
+}
 
+.results-chart h3 {
+    color: var(--white);
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
 
-
-
-
-
-
-
-
-
-
-/* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -309,16 +323,15 @@ section p {
     padding: 1rem;
     position: relative;
 }
-/* ADD ON TRANSITION ON HEIGHT */
 .bar {
     width: 50px;
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: 3s;
+    transition: height 0.5s ease-in-out;
     height: 0;
+    animation: stepUp 1s ease-in-out forwards;
 }
-/* THIS ONE IS DONE FOR YOU */
 .bar::after {
     content: attr(data-year);
     position: absolute;
@@ -337,11 +350,24 @@ section p {
         height: var(--height);
     }
 }
-/* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
-.bar {
-    animation: stepUp 1s ease-in-out forwards;
+
+#contact-us {
+    background-color: var(--black);
 }
 
+#contact-us h2, #contact-us p {
+    color: var(--white);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    background-color: var(--charcoal);
+    padding: 2rem;
+    border-radius: 8px;
+}
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
