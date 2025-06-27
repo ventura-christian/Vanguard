@@ -488,9 +488,9 @@ input[type="text"], input[type="email"], textarea {
     border: 2px solid var(--blue);
     border-radius: 5px;
     background-color: var(--white);
-    color: var(--white);
+    color: var(--black);
     font-family: var(--font);
-    font-size: 0.5rem;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
