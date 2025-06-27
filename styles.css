@@ -78,7 +78,6 @@ body {
     min-width: 400px;
 }
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -97,15 +96,6 @@ header {
     background-color: var(--black);
     padding: 1rem 0;
     box-shadow: 0 4px 8px var(--blue);
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
 }
 
 header .container {
@@ -269,6 +259,15 @@ section p {
     text-align: left;
 }
 
+#our-expertise, #what-we-offer {
+    background-color: var(--white);
+}
+
+#our-expertise h2, #our-expertise p, #what-we-offer h2 {
+    color: var(--black);
+    text-align: left;
+}
+
 #proven-results {
     background-color: var(--blue);
     padding-top: 1.5rem;
@@ -320,19 +319,38 @@ section p {
     max-width: 500px;
 }
 
-.results-chart h3 {
-    color: var(--white);
-    padding-bottom: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-}
-
 .results-chart {
     width: 100%;
     max-width: 800px; 
     background-color: var(--blue);
     border-radius: 8px;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-chart h3 {
+    color: var(--white);
+    padding-bottom: 1rem;
+    text-align: center; 
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.results-table h3,
+.results-chart h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.results-table,
+.results-chart {
+  display: flex;
+  flex-direction: column;
 }
 
 table {
@@ -367,16 +385,19 @@ table tbody tr:last-child td {
     max-width: 800px;
     padding: 1rem;
     position: relative;
+    box-sizing: border-box;
 }
+
 .bar {
     width: 50px;
     background: var(--charcoal);
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     position: relative;
     transition: height 0.5s ease-in-out;
     height: 0;
     animation: stepUp 1s ease-in-out forwards;
 }
+
 .bar::after {
     content: attr(data-year);
     position: absolute;
@@ -387,6 +408,7 @@ table tbody tr:last-child td {
     font-weight: bold;
     color: var(--white);
 }
+
 @keyframes stepUp {
     0% {
         height: 0;
@@ -402,21 +424,55 @@ table tbody tr:last-child td {
 
 #contact-us h2, #contact-us p {
     color: var(--white);
+    text-align: left;
 }
 
+
 form {
-    display: grid;
-    gap: 1rem;
-    max-width: 600px;
-    margin: 2rem auto 0 auto;
-    background-color: var(--charcoal);
+    max-width: 100%;
+    margin: 0;
+    background-color: var(--black);
     padding: 2rem;
-    border-radius: 8px;
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;
+}
+
+form .button {
+    width: 100%; 
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.form-bottom-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem; 
+    align-items: stretch; 
+}
+
+.form-group.full-width-textarea {
+    flex-grow: 1; 
+}
+
+.form-submit-button {
+    width: 100%; 
+    height: auto; 
+    align-self: flex-start;
+    margin-top: 0;
 }
 
 label {
@@ -429,12 +485,12 @@ label {
 input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid var(--light-dark-gray);
+    border: 2px solid var(--blue);
     border-radius: 5px;
-    background-color: var(--darker-gray);
+    background-color: var(--white);
     color: var(--white);
     font-family: var(--font);
-    font-size: 1rem;
+    font-size: 0.5rem;
     box-sizing: border-box;
 }
 
@@ -446,14 +502,6 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 
 textarea {
     resize: vertical;
-}
-
-form .button {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 1rem;
 }
 
 footer {
@@ -522,6 +570,24 @@ footer a:hover {
     background-color: var(--black);
 }
 
+.profits-section-header h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0; 
+}
+
+
+.results-table-group h3,
+.results-chart-group h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
 
 @media (min-width: 800px) {
     header .container {
@@ -586,25 +652,13 @@ footer a:hover {
         justify-content: space-between;
         align-items: stretch;
         gap: 2rem;
+        width: 100%;
     }
 
-    .results-table {
-        width: 50%;
-    }
-
-    .results-table h3 {
-        color: var(--white);
-        padding: 1rem 0;
-        text-align: center;
-        font-size: 1.5rem;
-        margin-bottom: 0;
-    }
-
-    .results-chart {
+    .results-chart, .results-table {
         width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
     }
 
     .results-table, .results-chart {
@@ -612,8 +666,93 @@ footer a:hover {
         min-width: 0;
     }
 
+    .results-table h3, .results-chart h3 {
+        text-align: left;
+        padding-left: 1.5rem;
+        font-size: 1.5rem;
+        color: var(--white);
+        margin-bottom: 1rem;
+    }
+
     #bar-chart {
         height: 350px
+    }
+
+    #proven-results {
+        padding-top: 3rem;
+        background-color: var(--blue);
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #proven-results .container.results-container {
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #proven-results h2 {
+        color: var(--white);
+        text-align: left;
+        width: 100%;
+        padding-left: 1.5rem;
+        box-sizing: border-box;
+        margin-bottom: 0.5rem;
+    }
+
+    #proven-results > p {
+        color: var(--white);
+        text-align: left;
+        width: 100%;
+        padding-left: 1.5rem;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+    }
+
+    .profits-section-header h3 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    form {
+        padding: 3rem;
+    }
+
+    .form-row {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    .form-bottom-row {
+        flex-direction: row; 
+        align-items: flex-end; 
+        gap: 1rem; 
+    }
+
+    .form-group.full-width-textarea {
+        flex: 2 / 1fr; 
+        margin-bottom: 0;
+    }
+
+    .form-submit-button {
+        flex: 1 / 0.5fr; 
+        max-width: 49%;
+        height: 50px; 
+        margin-top: 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
     }
 
 }
@@ -657,8 +796,29 @@ footer a:hover {
         padding: 3rem;
     }
 
+    .form-row {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
     #bar-chart {
         height: 350px;
     }
+    .results-table h3,
+    .results-chart h3 {
+        font-size: 1.5rem;
+        color: var(--white);
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        text-align: left;
+    }
+
 
 }
+
+
