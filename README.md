@@ -17,6 +17,8 @@
 - To create, initialize, and commit my files to a repository through github.com and the github desktop application
 - To fork a repository, view the contents of the repository and utilize prewritten code provided within to build a webpage
 
+## [Live Demo](https://ventura-christian.github.io/Vanguard/)
+
 ## 📐 Tools used
 - VS Code
 - Github
