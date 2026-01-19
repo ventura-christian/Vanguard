@@ -1,4 +1,4 @@
-# GIT 337 🪫 Vanguard
+#🪫 Vanguard Webpage
 <em>Responsive Webpage created by <ul>Christian Ventura</ul></em>
 
 ## 🧠 🧑‍💻 Objectives
