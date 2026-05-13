@@ -1,7 +1,8 @@
 # Vanguard Webpage
 <em>Responsive Webpage created by <ul>Christian Ventura</ul></em>
 
-## [Live Demo](https://ventura-christian.github.io/Vanguard/)
+## Webpage Link
+[Live Demo](https://ventura-christian.github.io/Vanguard/)
 
 ## 🧠 🧑‍💻 Objectives
 - To design, build, and publish a website from scratch using concepts learned in this course
