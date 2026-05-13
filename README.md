@@ -1,5 +1,7 @@
-#🪫 Vanguard Webpage
+# Vanguard Webpage
 <em>Responsive Webpage created by <ul>Christian Ventura</ul></em>
+
+## [Live Demo](https://ventura-christian.github.io/Vanguard/)
 
 ## 🧠 🧑‍💻 Objectives
 - To design, build, and publish a website from scratch using concepts learned in this course
@@ -16,8 +18,6 @@
   - Mobile menu
 - To create, initialize, and commit my files to a repository through github.com and the github desktop application
 - To fork a repository, view the contents of the repository and utilize prewritten code provided within to build a webpage
-
-## [Live Demo](https://ventura-christian.github.io/Vanguard/)
 
 ## 📐 Tools used
 - VS Code
